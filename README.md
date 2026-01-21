@@ -27,15 +27,14 @@ Projeto desenvolvido para fins de estudo e avaliação técnica em processo sele
 ```text
 src/
  ├─ app/
- │  ├─ layout.tsx        # Layout global (Header + Footer)
+ │  ├─ layout.tsx        
  │  ├─ page.tsx          # Página inicial (filmes populares)
- │  ├─ movie/
- │  │  └─ [id]/page.tsx  # Página de detalhes do filme
  │
  ├─ components/
  │  ├─ Header.tsx
  │  ├─ Footer.tsx
  │  ├─ MovieCard.tsx
+ │  ├─ MovieModal.tsx
  │  ├─ Loading.tsx
  │
  ├─ services/
