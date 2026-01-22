@@ -48,20 +48,17 @@ export default function Home() {
     <Container sx={{ mt: 3 }}>
       <Grid container spacing={3}>
         {movies.map(movie => (
-          <Grid 
-            item
-            xs={12}
-            sm={6}
-            md={4}
-            key={movie.id}
-            sx={{ display: "flex", justifyContent: "center" }}
-          >
-            <MovieCard
-              movie={movie}
-              onClick={() => handleOpenModal(movie)}
-            />
-          </Grid>
-        ))}
+        <Grid
+          key={movie.id}
+          size={{ xs: 12, sm: 6, md: 2.4 }}
+          sx={{ display: "flex", justifyContent: "center" }}
+        >
+        <MovieCard
+          movie={movie}
+          onClick={() => handleOpenModal(movie)}
+        />
+        </Grid>
+      ))}
       </Grid>
 
       <Stack spacing={2} alignItems="center" sx={{ mt: 4 }}>
