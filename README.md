@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Projeto TMDB – Catálogo de Filmes
 
-## Getting Started
+Aplicação front-end desenvolvida com **Next.js (App Router)** que consome a **API do The Movie Database (TMDB)** para exibir filmes populares e detalhes individuais, com foco em **boas práticas, organização de código e experiência do usuário**.
 
-First, run the development server:
+---
+
+## Demonstração
+
+Projeto desenvolvido para fins de estudo e avaliação técnica em processo seletivo.
+
+---
+
+## Tecnologias Utilizadas
+
+- Next.js 13+ (App Router)
+- React
+- TypeScript
+- Material UI (MUI)
+- Axios
+- TMDB API
+- Emotion (@emotion/react e @emotion/styled)
+
+---
+
+## 📁 Estrutura do Projeto
+
+```text
+src/
+ ├─ app/
+ │  ├─ layout.tsx        
+ │  ├─ page.tsx          # Página inicial (filmes populares)
+ │
+ ├─ components/
+ │  ├─ Header.tsx
+ │  ├─ Footer.tsx
+ │  ├─ MovieCard.tsx
+ │  ├─ MovieModal.tsx
+ │  ├─ Loading.tsx
+ │
+ ├─ services/
+ │  └─ tmdb.ts           # Configuração da API
+ │
+ ├─ styles/
+ │  └─ theme.ts          # Tema global do Material UI
+ │
+ ├─ globals.css
+```
+---
+## Funcionalidades
+
+- Listagem de filmes populares
+- Modal de detalhes do filme
+- Layout responsivo (mobile, tablet e desktop)
+- Feedback visual de carregamento
+- Tratamento de erro com Snackbar
+- Componentes reutilizáveis
+- Tema global com Material UI
+- Header e Footer globais
+---
+
+## Configuração da API (TMDB)
+Para criar sua conta no TMDB Acesse: https://www.themoviedb.org/
+
+Crie uma conta gratuita e gere sua API Key (v3 auth) em: Profile → Settings → API
+---
+## Criar arquivo .env.local
+
+Na raiz do projeto, crie o arquivo:
+
+```env
+NEXT_PUBLIC_TMDB_API_KEY=SUA_CHAVE_AQUI
+```
+---
+## Como rodar o projeto localmente
+Clone o repositório
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Instale as dependências
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Rode o projeto
+```bash
+npm run dev
+```
+Acesse o localhost
+```bash
+Next.js 16.1.4 (Turbopack)
+- Local:         http://localhost:3000
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
